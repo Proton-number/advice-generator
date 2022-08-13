@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-size: 18px;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color:  hsl(218, 23%, 16%);
+}
+
+
+.container{
+    background-color: hsl(215, 19%, 40%) ;
+    padding: 20px;
+    width: 73vw;
+    position: relative;
+}
+
+.words {
+    margin-bottom: 23px;
+}
+
+.words h4{
+    color: hsl(150, 100%, 66%);
+}
+
+.words p{
+    margin-top: 20px;
+    color: hsl(193, 38%, 86%);
+}
+
+.mobile-divider img{
+    width: 86%;
+   display: flex;
+   justify-content: center;
+   margin: auto;
+   margin-bottom: 30px;
+}
+
+
+.desktop-divider{
+    display: none;
+}
+
+.dice{
+ position: absolute;
+ right: 0;
+ left: 6px;
+}
+
+.dice button{
+    background-color: hsl(150, 100%, 66%);
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  position: relative;
+  padding: 26px;
+  border: 0.25em solid hsl(150, 100%, 66%);
+  box-shadow: 
+  0 0 0.5em 0  hsl(150, 100%, 66%),
+  0 0 0.5em 0  hsl(150, 100%, 66%);
+}
+
+.dice button:hover,
+.dice button:focus
+{
+    background:  hsl(150, 68%, 56%) ;
+}
+.dice button::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+     filter: blur(0.7em);
+     opacity: 0.7;
+}
+
+.dice button::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+     box-shadow: 0 0 1em 0.6em hsl(150, 100%, 68%);
+}
+
+
+
+.dice button img{
+    width: 68%;
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 0px;
+}
+
+/* 
+screens 600 */
+
+@media screen and (min-width:600px){
+    .dice button{
+        background-color: hsl(150, 100%, 66%);
+      width: 1vw;
+      height: 1vw;
+      border-radius: 50%;
+      position: relative;
+      padding: 26px;
+      border: 0.25em solid hsl(150, 100%, 66%);
+      box-shadow: 
+      0 0 0.5em 0  hsl(150, 100%, 66%),
+      0 0 0.5em 0  hsl(150, 100%, 66%)
+      ;
+    }
+    
+    
+    .dice button img{
+        width: 46%;
+        position: absolute;
+        bottom: 13px;
+        left: 14px;
+        right: 0px;
+    }
+}
+
+/* desktop size */
+
+@media screen and (min-width:760px){
+
+
+
+    .container{
+        background-color: hsl(215, 19%, 40%);
+        padding: 20px;
+        width: 45vw;
+        position: relative;
+    }
+    
+
+
+
+.mobile-divider img{
+  
+   display: none;
+}
+
+
+.desktop-divider{
+    width: 84%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 30px;
+  
+}
+
+
+
+.dice{
+    position: absolute;
+    right: 0;
+    left: 6px;
+   }
+   
+   .dice button{
+       background-color: hsl(150, 100%, 66%);
+     width: 1vw;
+     height: 1vw;
+     border-radius: 50%;
+     position: relative;
+     padding: 26px;
+     border: 0.25em solid hsl(150, 100%, 66%);
+     box-shadow: 
+     0 0 0.5em 0  hsl(150, 100%, 66%),
+     0 0 0.5em 0  hsl(150, 100%, 66%)
+     ;
+   }
+
+   
+   .dice button img{
+       width: 46%;
+       position: absolute;
+       bottom: 13px;
+       left: 14px;
+       right: 0px;
+   }
+
+}
+
+/* SCREEN FOR IPADS 800PX */
+
+@media  screen and (min-width:800px) {
+    
+    .container{
+        background-color: hsl(215, 19%, 40%);
+        padding: 20px;
+        width: 60vw;
+        position: relative;
+    }
+
+
+}
+
