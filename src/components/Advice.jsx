@@ -12,8 +12,8 @@ function Advice() {
     axios
       .get("https://api.adviceslip.com/advice")
       .then((res) => {
-        console.log(res)
-        setAdvice(res.data.advice)
+        console.log(res.data)
+        setAdvice(res.data.slip)
       })
       .catch((err) => {
         console.log(err)
@@ -25,9 +25,9 @@ function Advice() {
   return (
     <div className="container">
       <div className="words">
-        <h4>Advice #177</h4>
+        <h4>Advice {advices.id} </h4>
 
-        <p> {advices} </p>
+        <p> {advices.advice} </p>
       </div>
 
       <div className="mobile-divider">
