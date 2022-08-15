@@ -3,14 +3,15 @@ import Dice from "/src/images/icon-dice.svg"
 import mobileDivider from "/src/images/pattern-divider-mobile.svg"
 import desktopDivider from "/src/images/pattern-divider-desktop.svg"
 import "./Advice.css"
-import axios, { Axios } from "axios"
+import axios from "axios"
+import {motion} from 'framer-motion'
 
 function Advice() {
   const [advices, setAdvice] = useState("")
+  const [advicefromButton, setAdvicefromButton] = useState('')
 
   useEffect(() => {
-    axios
-      .get("https://api.adviceslip.com/advice")
+    axios.get("https://api.adviceslip.com/advice")
       .then((res) => {
         console.log(res.data)
         setAdvice(res.data.slip)
@@ -18,16 +19,21 @@ function Advice() {
       .catch((err) => {
         console.log(err)
       })
-  }, [])
+  }, [advicefromButton])
 
-  const adviceHandler = () => {}
+  const adviceHandler = () => {
+    setAdvicefromButton(advices)
+  }
 
   return (
-    <div className="container">
+    <motion.div 
+    initial={{x:-250}}
+    animate={{x:0}}
+    className="container">
       <div className="words">
-        <h4>Advice {advices.id} </h4>
+        <h4>Advice #{advices.id} </h4>
 
-        <p> {advices.advice} </p>
+        <p> {advices.advice}  </p>
       </div>
 
       <div className="mobile-divider">
@@ -44,7 +50,7 @@ function Advice() {
           <img src={Dice} />{" "}
         </button>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
