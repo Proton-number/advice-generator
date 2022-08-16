@@ -27,8 +27,8 @@ Users should be able to:
 - Generate a new piece of advice by clicking the dice icon
 
 ### Screenshot
+![Screenshot from 2022-08-16 00-49-26](https://user-images.githubusercontent.com/67767150/184757570-18167b90-9931-4543-8a9a-219afc8b5383.png)
 
-![](./home/dacron/Pictures/Screenshots from 2022-08-16 00-49-26.png)
 
 
 ### Links
