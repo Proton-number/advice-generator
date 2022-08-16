@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db/hub/advice-generator-JBJCwvv_7S)
-- Live Site URL: [Add live site URL here](https://proton-number.github.io/advice-generator/)
+- Solution URL: (https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db/hub/advice-generator-JBJCwvv_7S)
+- Live Site URL: (https://proton-number.github.io/advice-generator/)
 
 ## My process
 
