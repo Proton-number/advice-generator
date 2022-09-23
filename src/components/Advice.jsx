@@ -9,12 +9,14 @@ import {motion} from 'framer-motion'
 function Advice() {
   const [advices, setAdvice] = useState("")
   const [advicefromButton, setAdvicefromButton] = useState('')
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     axios.get("https://api.adviceslip.com/advice")
       .then((res) => {
         console.log(res.data)
         setAdvice(res.data.slip)
+      setIsLoading(false)
       })
       .catch((err) => {
         console.log(err)
@@ -23,6 +25,10 @@ function Advice() {
 
   const adviceHandler = () => {
     setAdvicefromButton(advices)
+  }
+  
+  if(isLoading){
+    return <h2 className='Loading-text'>Loading....</h2>
   }
 
   return (
