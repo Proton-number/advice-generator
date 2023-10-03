@@ -28,7 +28,7 @@ function Advice() {
   }
   
   if(isLoading){
-    return <h2 className='Loading-text'>Loading....</h2>
+    return<div class="spinner"></div>
   }
 
   return (
